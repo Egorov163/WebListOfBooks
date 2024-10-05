@@ -1,0 +1,18 @@
+﻿@using WebListOfBooks.Models.Books
+@model IndexViewModel
+@section Styles {
+    <link href="~/css/WebListOfBooks/books.css" rel="stylesheet" />
+}
+
+@foreach (var item in Model.Books)
+{
+    <div class="books">
+        <div>
+            Название книги: @item.Name
+        </div>
+        <div>
+            Автор книги: @item.Author
+        </div>
+    </div>
+
+}

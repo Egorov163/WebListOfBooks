@@ -1,0 +1,18 @@
+﻿@using WebListOfBooks.Models.Books
+@model BookViewModel
+
+<div>
+    <form method="post">
+        <div>
+            Название книги @Html.TextBoxFor(x => x.Name)
+        </div>
+
+        <div>
+            Автор <input placeholder="Author" name="author" />
+        </div>
+
+        <div>
+            <input type="submit" value="Добавить книгу" />
+        </div>
+    </form>
+</div>
