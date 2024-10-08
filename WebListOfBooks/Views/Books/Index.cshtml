@@ -10,7 +10,7 @@
         <div>
             Название книги: @item.Name
             <form action="/Books/UpdateName" method="post">
-                <input type="hidden" name="nameBook" value="@item.Name" />
+                <input type="hidden" name="id" value="@item.Id" />
                 <input placeholder="Введите новое название книги" name="name" value="@item.Name" />
                 <input type="submit" value="Обновить" />
             </form>
@@ -18,13 +18,13 @@
         <div>
             Автор книги: @item.Author
             <form action="/Books/UpdateAuthor" method="post">
-                <input type="hidden" name="name" value="@item.Name" />
+                <input type="hidden" name="id" value="@item.Id" />
                 <input placeholder="Введите нового автора" name="author" value="@item.Author" />
                 <input type ="submit" value="Обновить" />
             </form>
         </div>
         <div>
-            <a href="/Books/Remove?name=@item.Name">Удалить</a>
+            <a href="/Books/Remove?id=@item.Id">Удалить</a>
         </div>
     </div>
 }
