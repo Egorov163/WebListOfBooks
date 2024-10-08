@@ -1,10 +1,14 @@
+using Microsoft.EntityFrameworkCore;
+using WebListOfBooks.DbStuff;
 using WebListOfBooks.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
+var connectionString = "Server=(localdb)\\MSSQLLocalDB; Database=WebListOfBooks; Integrated Security=True";
+builder.Services.AddDbContext<WebDbContext>(x => x.UseSqlServer(connectionString));
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
 builder.Services.AddScoped<BookBuilder>();
 
 var app = builder.Build();
