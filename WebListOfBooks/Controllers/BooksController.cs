@@ -60,7 +60,8 @@ namespace WebListOfBooks.Controllers
         public IActionResult AddExampleBook()
         {
             var newBook = _bookBuilder.BuildExampleBook();
-            bookViewModels.Add(newBook);
+            _webDbContext.Add(newBook);
+            _webDbContext.SaveChanges();
             return RedirectToAction("Index");
         }
 

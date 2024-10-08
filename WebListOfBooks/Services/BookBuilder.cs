@@ -1,12 +1,13 @@
-﻿using WebListOfBooks.Models.Books;
+﻿using WebListOfBooks.DbStuff.Models;
+using WebListOfBooks.Models.Books;
 
 namespace WebListOfBooks.Services
 {
     public class BookBuilder
     {
-        public BookViewModel BuildExampleBook()
+        public Book BuildExampleBook()
         {
-            var book = new BookViewModel()
+            var book = new Book()
             {
                 Name = "Название книги",
                 Author = "Автор книги"
